@@ -14,7 +14,6 @@
       <% if user_signed_in? %>
         <div><%= link_to "Bookers、", root_path %></div>
         <div><%= link_to "Home、", user_path(current_user) %></div>
-        <!--「.id」不要でOK?-->
         <div><%= link_to "Users、", users_path %></div>
         <div><%= link_to "Books、", books_path %></div>
         <div><%= link_to "Log out、", destroy_user_session_path, method: :delete %></div>
@@ -29,7 +28,7 @@
 
     <%= yield %>
 
-    <footer>
+    <footer class="d-flex justify-content-center" style="border-top: solid 1px black;">
       <p>CopyRight Infratop.inc</p>
     </footer>
   </body>
